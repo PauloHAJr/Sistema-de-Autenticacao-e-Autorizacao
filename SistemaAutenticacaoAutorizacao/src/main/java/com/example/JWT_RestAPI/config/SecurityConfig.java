@@ -28,6 +28,8 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/username/**").permitAll()
                         .requestMatchers(HttpMethod.GET, "/user/**").permitAll()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/moderador**").hasRole("MODERADOR")
+                        .requestMatchers("/comum/**").hasRole("COMUM")
                         .anyRequest()
                         .authenticated()
                 ).httpBasic(Customizer.withDefaults());
@@ -36,17 +38,22 @@ public class SecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        UserDetails user = User.builder()
-                .username("joao")
-                .password(passwordEncoder().encode("4321"))
-                .roles("USER")
-                .build();
         UserDetails admin = User.builder()
                 .username("admin")
                 .password(passwordEncoder().encode("1234"))
                 .roles("ADMIN")
                 .build();
-        return new InMemoryUserDetailsManager(user,admin);
+        UserDetails moderador = User.builder()
+                .username("Mario")
+                .password(passwordEncoder().encode("senha1"))
+                .roles( "MODERADOR")
+                .build();
+        UserDetails comum = User.builder()
+                .username("Rafael")
+                .password(passwordEncoder().encode("senha2"))
+                .roles( "COMUM")
+                .build();
+        return new InMemoryUserDetailsManager(admin, moderador, comum);
     }
 
     @Bean
