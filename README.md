@@ -1,5 +1,29 @@
 # Sistema-de-Autenticacao-e-Autorizacao
 ## Documentação da API
+### Descrição
+Esta API utiliza o Jason Web Token (JWT) como chave de autenticação.
+
+### EndPoints
+POST/login:
+localhost:8080/login
+
+GET/username/{token}:
+localhost:8080/username/{token}
+
+GET/user:
+localhost:8080/user
+
+GET/admin:
+localhost:8080/admin
+
+GET/moderador:
+localhost:8080/moderador
+
+GET/comum:
+localhost:8080/comum
+
+### Diagrama
+
 
 # Insomnia
 ![Captura de Tela (1)](https://github.com/PauloHAJr/Sistema-de-Autenticacao-e-Autorizacao/assets/102565635/c2abcfc9-6c2e-4a60-bd12-c6576bbc39b5)
