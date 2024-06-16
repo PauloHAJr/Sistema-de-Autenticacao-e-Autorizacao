@@ -23,7 +23,7 @@ GET/comum:
 localhost:8080/comum
 
 ### Diagrama
-
+![Captura de Tela (169)](https://github.com/PauloHAJr/Sistema-de-Autenticacao-e-Autorizacao/assets/102565635/b2da154d-0fe2-4951-a309-7c2b6c678559)
 
 # Insomnia
 ![Captura de Tela (1)](https://github.com/PauloHAJr/Sistema-de-Autenticacao-e-Autorizacao/assets/102565635/c2abcfc9-6c2e-4a60-bd12-c6576bbc39b5)
