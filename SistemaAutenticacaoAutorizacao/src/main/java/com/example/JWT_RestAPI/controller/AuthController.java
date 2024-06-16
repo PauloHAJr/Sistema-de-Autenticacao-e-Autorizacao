@@ -47,4 +47,17 @@ public class AuthController {
     public String onlyAdmin(Authentication authentication) {
         return "Admin: " + authentication.getName();
     }
+
+    // Somente o moderado irá acessar
+    @Secured("MODERADOR")
+    @GetMapping("/moderador")
+    public String onlyModerado(Authentication authentication) {
+        return "Moderador: " + authentication.getName();
+    }
+
+    // Qualquer um irá acessar
+    @GetMapping("/comum")
+    public String onlyComum(Authentication authentication) {
+        return "Comum: " + authentication.getName();
+    }
 }
