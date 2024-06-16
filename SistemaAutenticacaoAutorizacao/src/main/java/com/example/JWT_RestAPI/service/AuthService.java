@@ -5,10 +5,6 @@ import org.springframework.stereotype.Service;
 
 /**
  * Serviço responsável por operações relacionadas à autenticação e geração de tokens JWT.
- *
- * @author <a href="mailto:joaopauloaramuni@gmail.com">João Paulo Aramuni</a>
- * @version 1.0
- * @since 2024-01-20
  */
 @Service
 public class AuthService {
