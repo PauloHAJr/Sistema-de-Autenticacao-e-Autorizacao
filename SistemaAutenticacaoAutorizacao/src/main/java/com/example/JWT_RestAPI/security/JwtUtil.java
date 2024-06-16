@@ -39,9 +39,4 @@ public class JwtUtil {
         return Jwts.parser().verifyWith(secret).build().parseSignedClaims(token).
                 getPayload().getSubject();
     }
-    public static String extractId(String token) {
-        SecretKey secret = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SECRET_STRING));
-        return Jwts.parser().verifyWith(secret).build().parseSignedClaims(token).
-                getPayload().getSubject();
-    }
 }
